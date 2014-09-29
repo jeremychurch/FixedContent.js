@@ -1,6 +1,12 @@
+# FixedContent.js
+
+A mobile-friendly, jQuery plugin that persists content (sidebar, nav, etc.) while scrolling.
+
+[Demo and Instructions](https://j.eremy.net/fixed-content/demo/)
+
 ## How to Use
 
-Download [jquery.fixedcontent.min.js](https://github.com/jeremychurch/FixedContent.js/blob/master/jquery.fixedcontent.min.js) to your project folder and include it just before the closing `</body>` tag. Make sure to include the [jQuery library](https://developers.google.com/speed/libraries/devguide#jquery) as well.
+Download [jquery.fixedcontent.min.js](https://raw.githubusercontent.com/jeremychurch/FixedContent.js/master/jquery.fixedcontent.min.js) to your project folder and include it just before the closing `</body>` tag. Make sure to include the [jQuery library](https://developers.google.com/speed/libraries/devguide#jquery) as well.
 
 ```
   <script src='jquery.min.js'></script>
@@ -71,3 +77,7 @@ See `minWidth` section above.
 ### Height vs. Window Height
 
 If the height of `.js_fixedcontent` is taller than the window, the plugin is disabled and the content will scroll with the page so nothing gets cut off.
+
+## Credits
+
+A jQuery plugin by [Jeremy Church](https://j.eremy.net/).
