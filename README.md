@@ -24,7 +24,7 @@ Nest `.js_fixedcontent` within a column (sidebar, etc.), then nest the desired f
 </div>
 ```
 
-### Suggestions
+#### Suggestions
 
 The plugin may not work well if `.js_fixedcontent` is added to an existing element or if CSS is applied to `.js_fixedcontent`.
 
@@ -46,35 +46,35 @@ Some of the settings can be customized:
 </script>
 ```
 
-### marginTop
+#### marginTop
 
 The margin between the window and fixed element. The margin will remain as the page is scrolled. The default value is 24 (px).
 
-### minWidth
+#### minWidth
 
 The min-width value disables the plugin on mobile devices or narrow screens. If your columns become rows at a certain media query, then it can prevent `.js_fixedcontent` from overlapping other content. The default value is 767 (px).
 
-### zIndex
+#### zIndex
 
 The default value is 500, but a custom value can be defined if needed.
 
 ## Other Features
 
-### Fluid Width
+#### Fluid Width
 
 The `.js_fixedcontent` element will fill its parents width, both when the page is loaded and if the window is resized.
 
-### Position on Load and Refresh
+#### Position on Load and Refresh
 
 If the page is refreshed the fixed content will remain in its expected position, even if the page was scrolled to a lower position. The same is true if an anchor link from another page is clicked.
 
 ## Mobile-Friendly
 
-### Min-Width
+#### Min-Width
 
 See `minWidth` section above.
 
-### Height vs. Window Height
+#### Height vs. Window Height
 
 If the height of `.js_fixedcontent` is taller than the window, the plugin is disabled and the content will scroll with the page so nothing gets cut off.
 
