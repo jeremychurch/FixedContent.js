@@ -2,17 +2,17 @@
 
 Download [jquery.fixedcontent.min.js](https://github.com/jeremychurch/FixedContent.js/blob/master/jquery.fixedcontent.min.js) to your project folder and include it just before the closing `</body>` tag. Make sure to include the [jQuery library](https://developers.google.com/speed/libraries/devguide#jquery) as well.
 
-`  <script src='jquery.min.js'></script>  
-  <script src='jquery.fixedcontent.min.js'></script>  
-</body>`
+`  <script src='jquery.min.js'></script>`
+`  <script src='jquery.fixedcontent.min.js'></script>`
+`</body>`
 
 Nest `.js_fixedcontent` within a column (sidebar, etc.), then nest the desired fixed content within it (`.js_fixedcontent`) like so:
 
-`<div class="sidebar-or-column-or-whatever">  
-  <div class="js_fixedcontent">  
-    <!-- content, nav, map, controls, etc. -->  
-  </div>  
-</div>`
+`<div class="sidebar-or-column-or-whatever">`
+`  <div class="js_fixedcontent">`
+`    <!-- content, nav, map, controls, etc. -->`
+`  </div>`
+`</div>`
 
 ### Suggestions
 
