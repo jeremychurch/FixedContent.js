@@ -2,17 +2,17 @@
 
 A mobile-friendly, jQuery plugin that persists content (sidebar, nav, etc.) while scrolling.
 
-**[Demo and Instructions](https://j.eremy.net/fixed-content/demo/)**
-
 *A.K.A. sticky sidebar, persistent nav, fixed menu, etc.*
+
+**[Demo and Instructions](https://j.eremy.net/fixed-content/demo/)**
 
 ## How to Use
 
 Download [jquery.fixedcontent.min.js](https://raw.githubusercontent.com/jeremychurch/FixedContent.js/master/jquery.fixedcontent.min.js) to your project folder and include it just before the closing `</body>` tag. Make sure to include the [jQuery library](https://developers.google.com/speed/libraries/devguide#jquery) as well.
 
 ```
-  <script src='jquery.min.js'></script>
-  <script src='jquery.fixedcontent.min.js'></script>
+  <script src="jquery.min.js"></script>
+  <script src="jquery.fixedcontent.min.js"></script>
 </body>
 ```
 
@@ -37,10 +37,10 @@ Use this plugin sparingly. Most content should scroll naturally with the page. D
 Some of the settings can be customized:
 
 ```
-<script src='jquery.fixedcontent.min.js'></script>
+<script src="jquery.fixedcontent.min.js"></script>
 
 <script>
-  $('.js_fixedcontent').fixedcontent({
+  $(".js_fixedcontent").fixedcontent({
     marginTop: 24,
     minWidth: 767,
     zIndex: 500
