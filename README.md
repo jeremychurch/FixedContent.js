@@ -2,7 +2,7 @@
 
 A mobile-friendly, jQuery plugin that persists content (sidebar, nav, etc.) while scrolling.
 
-[Demo and Instructions](https://j.eremy.net/fixed-content/demo/)
+**[Demo and Instructions](https://j.eremy.net/fixed-content/demo/)**
 
 ## How to Use
 
