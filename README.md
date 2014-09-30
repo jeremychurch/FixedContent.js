@@ -4,6 +4,8 @@ A mobile-friendly, jQuery plugin that persists content (sidebar, nav, etc.) whil
 
 **[Demo and Instructions](https://j.eremy.net/fixed-content/demo/)**
 
+*A.K.A. sticky sidebar, persistent nav, fixed menu, etc.*
+
 ## How to Use
 
 Download [jquery.fixedcontent.min.js](https://raw.githubusercontent.com/jeremychurch/FixedContent.js/master/jquery.fixedcontent.min.js) to your project folder and include it just before the closing `</body>` tag. Make sure to include the [jQuery library](https://developers.google.com/speed/libraries/devguide#jquery) as well.
@@ -80,4 +82,6 @@ If the height of `.js_fixedcontent` is taller than the window, the plugin is dis
 
 ## Credits
 
-A jQuery plugin by [Jeremy Church](https://j.eremy.net/).
+A jQuery plugin by [Jeremy Church](https://j.eremy.net/) ([@jeremybchurch](https://twitter.com/jeremybchurch))
+
+Article: [https://j.eremy.net/fixed-content/](https://j.eremy.net/fixed-content/)
