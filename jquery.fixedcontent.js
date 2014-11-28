@@ -1,69 +1,68 @@
-(function($) {
+(function (window, $) {
+	"use strict";
 
-  if ($('.js_fixedcontent').length > 0) {
+	$.fn.fixedcontent = function (options) {
+		var defaults = {
+			marginTop: 24,
+			minWidth: 767,
+			zIndex: 500
+		};
 
-    $.fn.fixedcontent = function(options){
-      var defaults = {
-        marginTop  : 24,
-        minWidth   : 767,
-        zIndex     : 500
-      };
+		var options = $.extend({}, defaults, options);
 
-      var options = $.extend({}, defaults, options);
+		return this.each(function () {
+			var obj = $(this);
+			
+			var contentOffset;
+			var contentHeight;
+			var parentWidth;
 
-      return this.each(function() {
-        // console.log(options);
+			obj.css({
+				top: options.marginTop,
+				'z-index': options.zIndex
+			});
 
-        $('.js_fixedcontent').css({
-          top: options.marginTop,
-          'z-index': options.zIndex
-        });
+			var getContentOffset = function () {
+				contentOffset = obj.offset().top;
+			};
+			getContentOffset();
 
-        getContentOffset = function() {
-          contentOffset = $('.js_fixedcontent').offset().top;
-        };
-        getContentOffset();
+			var setContentWidth = function () {
+				parentWidth = obj.parent().innerWidth();
+				obj.css('width', parentWidth);
+			};
+			setContentWidth();
 
-        setContentWidth = function() {
-          parentWidth = $('.js_fixedcontent').parent().innerWidth();
-          $('.js_fixedcontent').css('width', parentWidth);
-        };
-        setContentWidth();
+			var getContentHeight = function () {
+				contentHeight = obj.outerHeight();
+			};
+			getContentHeight();
 
-        getContentHeight = function() {
-          contentHeight = $('.js_fixedcontent').outerHeight();
-        };
-        getContentHeight();
+			var setContentPosition = function () {
+				if ($(window).innerHeight() > (contentHeight + options.marginTop)) {
+					if ($(window).scrollTop() >= (contentOffset - options.marginTop)) {
+						obj.css({
+							position: 'fixed'
+						});
+					}
 
-        setContentPosition = function() {
-          if ($(window).innerHeight() > (contentHeight + options.marginTop)) {
-            if ($(window).scrollTop() >= (contentOffset - options.marginTop)) {
-              $('.js_fixedcontent').css({
-                position: 'fixed'
-              });
-            }
+					else if ($(window).scrollTop() < (contentOffset - options.marginTop)) {
+						obj.css('position', 'static');
+					}
+				}
+			};
+			setContentPosition();
 
-            else if ($(window).scrollTop() < (contentOffset - options.marginTop)) {
-              $('.js_fixedcontent').css('position', 'static');
-            }
-          }
-        };
-        setContentPosition();
+			$(window).resize(function (e) {
+				setContentWidth();
+			});
 
-        $(window).resize(function(e) {
-          setContentWidth();
-        });
+			if ($(window).innerWidth() >= options.minWidth) {
+				$(window).scroll(function (e) {
+					setContentPosition();
+				});
+			}
+		});
+	};
 
-        if ($(window).innerWidth() >= options.minWidth) {
-          $(window).scroll(function(e) {
-            setContentPosition();
-          });
-        }
-      });
-    };
-
-    $('.js_fixedcontent').fixedcontent();
-
-  }
-
-}(jQuery));
+}(window, jQuery));
